@@ -1,11 +1,9 @@
 ## About
-Simple Genetic Algorithm to be used in 1D functions
+Simple Genetic Algorithm with minimization function
 
 1D functions:
 * *x*: population
 * *y*: fitness score
-
-Minimization function
 
 Main function: `ga1d.m`
 * First section: Matlab native function, for result comparison
