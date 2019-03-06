@@ -14,5 +14,5 @@
     * Change fitness function in lines 36 and 37
 
 ## Dependencies
-* Global Optimization Toolbox: *ga* function in native Matlab code
-* Communication System Toolbox: *de2bi* and *bi2de*
+* Global Optimization Toolbox: *ga* function in first section
+* Communication System Toolbox: *de2bi* and *bi2de* functions in second section
