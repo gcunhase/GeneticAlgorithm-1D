@@ -12,3 +12,7 @@
     * First section: Matlab native function, for result comparison
     * Second section: personal code
     * Change fitness function in lines 36 and 37
+
+## Dependencies
+* Global Optimization Toolbox: *ga* function in native Matlab code
+* Communication System Toolbox: *de2bi* and *bi2de*
