@@ -37,9 +37,7 @@ while generation <= max_generation
     y = FitnessFunction(pop);
     
     % Selection: rank population by lowest y score (minimization problem)
-    y_max = max(y, [], 2);
-    [dummy, index] = sort(y_max, 'ascend');
-    y_sorted = y(index);
+    [y_sorted, index] = sort(y, 'ascend');
     pop_sorted = pop(index);
     
     if generation < max_generation
