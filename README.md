@@ -16,11 +16,9 @@
 
 * Different selection functions:
     * Random
-    * Roulette wheel
+    * Roulette wheel [[Roulette vs Rank paper](http://www.ijmlc.org/papers/146-C00572-005.pdf)]
     * Tournament
-    * [TODO] Rank
     * Breeder [[paper1](http://www.muehlenbein.org/breeder93.pdf), [paper2](https://pdfs.semanticscholar.org/26b4/c7112283a85c8b8af43aea73e3c8e8581e9d.pdf)] [[blog link](https://blog.sicara.com/getting-started-genetic-algorithms-python-tutorial-81ffa1dd72f9)]
-    * [Roulette vs Rank paper](http://www.ijmlc.org/papers/146-C00572-005.pdf)
     * [Others](https://www.tutorialspoint.com/genetic_algorithms/genetic_algorithms_parent_selection.htm)
 
 ## Results
@@ -36,7 +34,6 @@
     | Random    | too random |
     | Roulette  | (7.82, -1344.2637) |
     | Tournament| (7.81, -1344.2517) |
-    | Rank      | (, ) |
 
 ## Dependencies
 * Tested with Matlab 2018b
