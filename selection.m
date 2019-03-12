@@ -25,6 +25,20 @@ function next_parents = selection(y_sorted, pop_sorted, n_pop, num_children, typ
                     end
                 end
             end
+        case 'tournament'
+            K = 5;
+            next_parents = zeros(1, n_pop/2);
+            j = 1;
+            for i=1:n_pop/2
+                candidates = randperm(n_pop, K);
+                candidates_fitness = y_sorted(candidates);
+                candidates_pop = pop_sorted(candidates);
+                
+                % Chose best fitness from candidates
+                [~, idx] = min(candidates_fitness);  % minimization problem
+                next_parents(j) = candidates_pop(idx);
+                j = j + 1;
+            end
         case 'breeder'
             % Breeding: top parents + lucky few
             % Sources: https://pdfs.semanticscholar.org/26b4/c7112283a85c8b8af43aea73e3c8e8581e9d.pdf

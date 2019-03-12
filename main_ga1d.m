@@ -11,7 +11,7 @@ numberOfVariables = 1;
 format long;
 
 % Decides whether initial population has a random seed or the same (for fidelity)
-testing = 1;
+testing = 0;
 
 % Range
 a = 0;
@@ -45,7 +45,7 @@ while generation <= max_generation
     if generation < max_generation
         
         % Selection
-        next_parents = selection(y_sorted, pop_sorted, n_pop, num_children, 'roulette');
+        next_parents = selection(y_sorted, pop_sorted, n_pop, num_children, 'tournament');
         
         % Crossover (reproduction)
         % n_pop=10 -> p(5)xp(1), p(4)xp(2), p(3)xp(3), p(2)xp(4), p(1)xp(5)
