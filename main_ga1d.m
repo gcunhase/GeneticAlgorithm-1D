@@ -26,10 +26,6 @@ float_precision = 2;  % 10^float_precision
 num_bits_per_sample = 16;
 num_children = 2;
 mutation_prob = 0.1;
-% M + N + num_children == n_pop
-% N + M == n_pop/2
-N = round(n_pop/(num_children*2));  % n_pop=10, N=3
-M = round(n_pop/num_children - N);  % n_pop=10, M=2
 % Check criteria
 while generation <= max_generation
     % Fitness
@@ -41,10 +37,10 @@ while generation <= max_generation
     pop_sorted = pop(index);
     
     if generation < max_generation
-        best_sample = [1:1:N];
-        lucky_few = randi([N, n_pop], [1, M]);
-        next_parents = breeders_selection(pop_sorted, best_sample, lucky_few);  % n_pop=10, next_pop=5
-
+        
+        % Selection
+        next_parents = selection(pop_sorted, n_pop, num_children, 'breeder');
+        
         % Crossover (reproduction)
         % n_pop=10 -> p(5)xp(1), p(4)xp(2), p(3)xp(3), p(2)xp(4), p(1)xp(5)
         % Each producing 2 new children for the new population
