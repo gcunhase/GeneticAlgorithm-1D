@@ -16,12 +16,21 @@
 
 * Different selection functions:
     * Random
-    * Tournament
-    * Rank
-    * Roulette wheel
+    * [TODO] Tournament
+    * [TODO] Rank
+    * [TODO] Roulette wheel
     * Breeder [[paper1](http://www.muehlenbein.org/breeder93.pdf), [paper2](https://pdfs.semanticscholar.org/26b4/c7112283a85c8b8af43aea73e3c8e8581e9d.pdf)] [[blog link](https://blog.sicara.com/getting-started-genetic-algorithms-python-tutorial-81ffa1dd72f9)]
     * [Roulette vs Rank paper](http://www.ijmlc.org/papers/146-C00572-005.pdf)
     * [Others](https://www.tutorialspoint.com/genetic_algorithms/genetic_algorithms_parent_selection.htm)
+
+## Results
+1. \[y = x^4-10x^3-5x^2+4\]
+    > Roots: (0.61050, 0.0000344), (10.474, 0.125), (-0.54220+0.57583i, -0.0000217-0.0000448i), (-0.54220-0.57583i, -0.0000217+0.0000448i)
+    * Population 10, gen 100 
+    * Matlab: (7.8102, -1323)
+    * Breeder: (7.67, -1341.4817)
+    * Random: (10.19, -314.1434)
+    * Roulette: (7.82, -1344.2637)
 
 ## Dependencies
 * Tested with Matlab 2018b

@@ -8,17 +8,23 @@ numberOfVariables = 1;
 
 %% GA 1D: Custom code
 
+format long;
+
 % Decides whether initial population has a random seed or the same (for fidelity)
 testing = 1;
+
+% Range
+a = 0;
+b = 20;
+
 % Initial population
-n_pop = 10;  % has to be even
+n_pop = 100;  % has to be even
 if testing == 1
     rng('default')
-    pop = rand(1,n_pop);
 else
     rng('shuffle');
-    pop = rand(1,n_pop);
 end
+pop = (b-a).*rand(1,n_pop) + a;
 
 max_generation = 100;
 generation = 0;
@@ -39,7 +45,7 @@ while generation <= max_generation
     if generation < max_generation
         
         % Selection
-        next_parents = selection(pop_sorted, n_pop, num_children, 'random');
+        next_parents = selection(y_sorted, pop_sorted, n_pop, num_children, 'roulette');
         
         % Crossover (reproduction)
         % n_pop=10 -> p(5)xp(1), p(4)xp(2), p(3)xp(3), p(2)xp(4), p(1)xp(5)
