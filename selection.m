@@ -3,8 +3,10 @@ function next_parents = selection(pop_sorted, n_pop, num_children, type)
 %   Detailed explanation goes here
 
     switch type
+        case 'random'
+            next_parents = pop_sorted(randperm(n_pop, n_pop/2));
         case 'breeder'
-            % Ranking + lucky few
+            % Breeding: top parents + lucky few
             % Sources: https://pdfs.semanticscholar.org/26b4/c7112283a85c8b8af43aea73e3c8e8581e9d.pdf
             % https://blog.sicara.com/getting-started-genetic-algorithms-python-tutorial-81ffa1dd72f9
             N = round(n_pop/(num_children*2));  % n_pop=10, N=3

@@ -39,7 +39,7 @@ while generation <= max_generation
     if generation < max_generation
         
         % Selection
-        next_parents = selection(pop_sorted, n_pop, num_children, 'breeder');
+        next_parents = selection(pop_sorted, n_pop, num_children, 'random');
         
         % Crossover (reproduction)
         % n_pop=10 -> p(5)xp(1), p(4)xp(2), p(3)xp(3), p(2)xp(4), p(1)xp(5)
